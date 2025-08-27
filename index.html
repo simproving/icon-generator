@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Web Store Icon Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chrome Web Store Icon Generator</h1>
+            <p>Create professional icons for your Chrome extensions</p>
+        </header>
+
+        <main>
+            <div class="generator-section">
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label for="iconText">Text/Letters:</label>
+                        <input type="text" id="iconText" placeholder="Enter text (e.g., 'AB', '1', '★')" maxlength="3">
+                    </div>
+
+                    <div class="color-controls">
+                        <div class="control-group">
+                            <label for="backgroundColor">Background Color:</label>
+                            <input type="color" id="backgroundColor" value="#4285f4">
+                        </div>
+                        <div class="control-group">
+                            <label for="textColor">Text Color:</label>
+                            <input type="color" id="textColor" value="#ffffff">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="shapeType">Shape:</label>
+                        <select id="shapeType">
+                            <option value="circle">Circle</option>
+                            <option value="square">Square</option>
+                            <option value="rounded">Rounded Square</option>
+                            <option value="diamond">Diamond</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="iconSize">Icon Size:</label>
+                        <select id="iconSize">
+                            <option value="16">16x16 (Small)</option>
+                            <option value="48" selected>48x48 (Medium)</option>
+                            <option value="128">128x128 (Large)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="fontFamily">Font Style:</label>
+                        <select id="fontFamily">
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                            <option value="Impact, sans-serif">Impact</option>
+                            <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="fontSize">Font Size:</label>
+                        <input type="range" id="fontSize" min="8" max="64" value="32">
+                        <span id="fontSizeValue">32px</span>
+                    </div>
+
+                    <div class="control-group">
+                        <button id="downloadBtn" class="btn-primary" disabled>Download Icon</button>
+                    </div>
+                </div>
+
+                <div class="preview-panel">
+                    <div class="canvas-container">
+                        <canvas id="iconCanvas" width="128" height="128"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Chrome Web Store Icon Requirements</h3>
+                <ul>
+                    <li><strong>16x16:</strong> Used in the extension management page</li>
+                    <li><strong>48x48:</strong> Used in the extensions management page</li>
+                    <li><strong>128x128:</strong> Used in the Chrome Web Store and during installation</li>
+                </ul>
+                <p>All icons should be PNG format and follow Google's design guidelines for consistency.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
